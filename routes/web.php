@@ -12,3 +12,7 @@ Auth::routes();
 
 // image route
 Route::resource('image', ImageController::class, ['only' => ['store']]);
+
+if (config('app.env') === 'production' or config('app.env') === 'staging') {
+    URL::forceScheme('https');
+}
