@@ -18515,7 +18515,7 @@ __webpack_require__.r(__webpack_exports__);
     } = Object(vue__WEBPACK_IMPORTED_MODULE_0__["toRefs"])(props);
 
     const getImages = async () => {
-      await axios__WEBPACK_IMPORTED_MODULE_1___default.a.get('api/images/?page=' + props.page).then(response => {
+      await axios__WEBPACK_IMPORTED_MODULE_1___default.a.get('api/images?page=' + props.page).then(response => {
         images.value = response.data.data;
         pagination.value = response.data;
         len.value = pagination.value.last_page;
