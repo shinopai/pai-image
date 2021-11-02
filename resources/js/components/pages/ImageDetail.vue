@@ -21,7 +21,7 @@
 </div>
         <p v-if="user" class="mt-5 text-grey-darker text-base">
           <textarea class="border-2 p-2" cols="32" rows="5" style="resize: none;" v-model="content"></textarea>
-          <button type="button" class="bg-yellow-500 hover:bg-yellow-700 text-white p-2 rounded block sm:ml-auto mt-2" @click="storeComment(image.id, user.id)">submit comment</button>
+          <button type="button" class="bg-yellow-500 hover:bg-yellow-700 text-white p-2 rounded block md:ml-20 mt-2" @click="storeComment(image.id, user.id)">submit comment</button>
         </p>
       </div>
     </div>

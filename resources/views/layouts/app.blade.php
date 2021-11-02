@@ -65,8 +65,8 @@
         <div class="sidebar-bg"></div>
         <!-- /sidembar content -->
 
-        <div class="w-full hidden flex-grow sm:flex sm:items-center sm:w-auto" id="navbar">
-            <div class="text-sm text-white lg:flex-grow  text-center lg:text-right">
+        <div class="w-full hidden flex-grow md:flex md:items-center md:w-auto" id="navbar">
+            <div class="text-sm text-white md:flex-grow  text-center md:text-right">
                 @guest
                     <a class="nav-link mr-3 bg-gray-400 p-2 rounded" href="{{ route('login') }}">{{ __('Login') }}</a>
                     @if (Route::has('register'))
