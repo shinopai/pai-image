@@ -19,13 +19,8 @@ class User extends Authenticatable
         'name', 'email', 'password',
     ];
 
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
-    protected $hidden = [
-        'password', 'remember_token',
+    protected $visible = [
+        'id', 'name'
     ];
 
     /**
@@ -36,4 +31,22 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**
+     * relation
+     */
+    public function images()
+    {
+        return $this->hasMany('App\Image');
+    }
+    
+    public function comments()
+    {
+        return $this->hasMany('App\Comment');
+    }
+
+    public function likes()
+    {
+        return $this->hasMany('App\Like');
+    }
 }
