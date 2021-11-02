@@ -57,7 +57,7 @@ export default {
       const { page } = toRefs(props)
 
       const getImages = async () => {
-        await Axios.get('api/images/?page=' + props.page)
+        await Axios.get('api/images?page=' + props.page)
                    .then( response => {
                      images.value = response.data.data
                      pagination.value = response.data
