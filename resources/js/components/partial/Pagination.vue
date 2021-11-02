@@ -2,7 +2,7 @@
 <!-- component -->
 <div class="mt-16 px-5 py-5 bg-white border-t flex flex-col xs:flex-row items-center xs:justify-between">
 	<div>
-		<nav class="relative z-0 inline-flex rounded-md shadow-sm -space-x-px" aria-label="Pagination">
+		<nav v-if="pagination.data" class="relative z-0 inline-flex rounded-md shadow-sm -space-x-px" aria-label="Pagination">
 			<li v-if="isPrevExists(pagination.current_page)"
 				class="relative inline-flex items-center px-4 py-2 border border-gray-500 bg-gray-200 text-lg text-gray-900 hover:bg-gray-400 cursor-pointer">
                 <span @click="goToPrev(pagination.current_page)"><i class="fas fa-angle-double-left"></i></span></li>
