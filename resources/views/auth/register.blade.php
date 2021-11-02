@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="w-full mt-20">
+    <div class="w-full mt-10">
         <div class="w-full bg-white rounded shadow-lg p-8">
             <span class="block w-full text-xl uppercase font-bold mb-4">{{ __('Register') }}</span>
             <form method="POST" action="{{ route('register') }}">

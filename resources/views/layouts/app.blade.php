@@ -65,7 +65,7 @@
         <div class="sidebar-bg"></div>
         <!-- /sidembar content -->
 
-        <div class="w-full hidden flex-grow lg:flex lg:items-center lg:w-auto" id="navbar">
+        <div class="w-full hidden flex-grow sm:flex sm:items-center sm:w-auto" id="navbar">
             <div class="text-sm text-white lg:flex-grow  text-center lg:text-right">
                 @guest
                     <a class="nav-link mr-3 bg-gray-400 p-2 rounded" href="{{ route('login') }}">{{ __('Login') }}</a>
@@ -159,44 +159,8 @@
 
     @yield('content')
 
-    <!-- sidebar script -->
+    <!-- script -->
     <script src="{{ mix('js/sidebar.js') }}" defer></script>
-
-    <script>
-        'use strict';
-        document.getElementsByClassName('sidebar-open').addEventListener('click', function() {
-            alert('I\'m pissed off!!');
-        });
-
-        const modalOpen = document.getElementsByClassName('modal-open');
-        const modalCloses = document.getElementsByClassName('modal-close');
-        const modal = document.getElementsByClassName('modal');
-
-        modalOpen[0].addEventListener('click', function() {
-            modal[0].classList.toggle('hidden');
-        })
-
-        for (let i = 0; i < modalCloses.length; i++) {
-            modalCloses[i].addEventListener('click', function() {
-                modal[0].classList.add('hidden');
-            })
-        }
-
-        // image preview 
-        const myImage = document.getElementsByClassName('my-image');
-        const preview = document.getElementsByClassName('preview');
-
-        if (modal[0].classList.contains('hidden')) {
-            preview[0].removeAttribute('src')
-        }
-
-        myImage[0].addEventListener('change', function(e) {
-            let reader = new FileReader();
-            reader.onload = function(e) {
-                preview[0].setAttribute('src', e.target.result);
-            }
-            reader.readAsDataURL(e.target.files[0]);
-        })
-    </script>
+    <script src="{{ mix('js/modal.js') }}" defer></script>
 
 </html>
